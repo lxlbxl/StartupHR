@@ -1,0 +1,30 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Prevent direct access to .env and .php config files
+    RewriteRule ^backend/(env\.php|config\.php) - [F,L,NC]
+
+    # Route /api/ requests directly to the PHP router
+    RewriteCond %{REQUEST_URI} ^/api/ [NC]
+    RewriteRule ^api/(.*)$ backend/router.php [L,QSA]
+
+    # Allow direct access to backend uploads folder
+    RewriteCond %{REQUEST_URI} ^/backend/uploads/ [NC]
+    RewriteRule ^ - [L]
+
+    # Serve existing static files/folders directly (assets, images, scripts)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Route all other non-file requests to index.html to allow React Router to handle URLs
+    RewriteRule ^ index.html [L]
+</IfModule>
+
+# Block access to hidden files/directories except .well-known
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
+    RewriteCond %{SCRIPT_FILENAME} -d [OR]
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule "(^|/)\." - [F]
+</IfModule>

@@ -1,0 +1,364 @@
+.application-page {
+    padding-top: var(--nav-height);
+    min-height: 100vh;
+    background: var(--color-bg-warm);
+}
+
+/* === Header === */
+.application-page__header {
+    position: relative;
+    padding: var(--space-12) 0 var(--space-8);
+    background: var(--color-bg-warm);
+    text-align: center;
+}
+
+.application-page__header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.application-page__title {
+    font-size: var(--text-4xl);
+    color: var(--color-primary);
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-2);
+}
+
+.application-page__subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+}
+
+/* === Form Container === */
+.application-form-container {
+    max-width: 800px;
+    margin: 0 auto var(--space-16);
+    position: relative;
+    z-index: 10;
+}
+
+/* === Form === */
+.application-form {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Minimalist Progress Bar */
+.application-form__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--color-border-light);
+    z-index: 20;
+}
+
+.application-form__progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+    transition: width 0.5s ease-in-out;
+}
+
+.application-form__step {
+    display: none;
+    padding: var(--space-12) var(--space-12) var(--space-8);
+    animation: fadeInUp var(--duration-slow) var(--ease-out);
+}
+
+.application-form__step--active {
+    display: block;
+}
+
+.application-form__step-header {
+    margin-bottom: var(--space-10);
+}
+
+.application-form__step-header h2 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+}
+
+.application-form__step-header p {
+    color: var(--color-text-secondary);
+    font-size: var(--text-lg);
+}
+
+.application-form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.application-form__fields-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+}
+
+/* === Quiz Inputs (Floating Labels) === */
+.quiz-input-group {
+    position: relative;
+    margin-bottom: var(--space-2);
+}
+
+.quiz-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--color-border);
+    padding: var(--space-4) 0;
+    font-size: var(--text-xl);
+    color: var(--color-text);
+    transition: border-color var(--duration-fast);
+    border-radius: 0;
+}
+
+.quiz-input:focus {
+    outline: none;
+    border-bottom-color: var(--color-primary);
+}
+
+.quiz-input::placeholder {
+    color: transparent;
+}
+
+.quiz-label {
+    position: absolute;
+    left: 0;
+    top: var(--space-4);
+    font-size: var(--text-xl);
+    color: var(--color-text-muted);
+    transition: all var(--duration-fast) var(--ease-out);
+    pointer-events: none;
+}
+
+.quiz-input:focus~.quiz-label,
+.quiz-input:not(:placeholder-shown)~.quiz-label,
+select.quiz-input~.quiz-label {
+    top: -16px;
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.quiz-input.error {
+    border-bottom-color: var(--color-error);
+}
+
+.input-error {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--color-error);
+}
+
+select.quiz-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+}
+
+/* === File Upload === */
+.file-upload {
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--duration-fast) var(--ease-out);
+    overflow: hidden;
+}
+
+.file-upload:hover {
+    border-color: var(--color-accent);
+    background: var(--color-accent-subtle);
+}
+
+.file-upload--error {
+    border-color: var(--color-error);
+}
+
+.file-upload--has-file {
+    border-style: solid;
+    border-color: var(--color-success);
+    background: var(--color-success-bg);
+}
+
+.file-upload__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-8) var(--space-6);
+    cursor: pointer;
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+.file-upload__text {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+.file-upload__text strong {
+    color: var(--color-accent);
+}
+
+.file-upload__hint {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+.file-upload__preview {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+}
+
+.file-upload__name {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.file-upload__size {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+.file-upload__remove {
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    padding: var(--space-1);
+    border-radius: var(--radius-sm);
+    transition: all var(--duration-fast);
+}
+
+.file-upload__remove:hover {
+    color: var(--color-error);
+    background: rgba(224, 36, 36, 0.1);
+}
+
+/* === Form Navigation === */
+.application-form__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6) var(--space-10);
+    border-top: 1px solid var(--color-border-light);
+    background: var(--color-bg);
+}
+
+/* === Success === */
+.application-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - var(--nav-height));
+    padding: var(--space-8);
+}
+
+.application-success__inner {
+    text-align: center;
+    max-width: 500px;
+}
+
+.application-success__icon {
+    margin-bottom: var(--space-6);
+}
+
+.application-success__title {
+    font-size: var(--text-4xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+}
+
+.application-success__text {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-4);
+    line-height: 1.7;
+}
+
+.application-success__email {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-8);
+}
+
+.application-success__actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .application-form__step {
+        padding: var(--space-6);
+    }
+
+    .application-form__nav {
+        padding: var(--space-4) var(--space-6);
+    }
+
+    .application-form__fields-row {
+        grid-template-columns: 1fr;
+    }
+
+    .step-indicator {
+        padding: var(--space-4);
+        gap: 0;
+    }
+
+    .step-indicator__label {
+        display: none;
+    }
+
+    .step-indicator__line {
+        width: 40px;
+    }
+
+    .application-page__title {
+        font-size: var(--text-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .application-form__step {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .application-form__nav {
+        padding: var(--space-3) var(--space-4);
+        flex-wrap: wrap;
+    }
+
+    .application-page__header {
+        padding: var(--space-8) 0 var(--space-6);
+    }
+
+    .application-page__title {
+        font-size: var(--text-xl);
+    }
+
+    .quiz-input {
+        font-size: var(--text-lg);
+    }
+
+    .quiz-label {
+        font-size: var(--text-lg);
+    }
+
+    .application-success__title {
+        font-size: var(--text-2xl);
+    }
+}

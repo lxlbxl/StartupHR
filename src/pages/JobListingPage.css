@@ -1,0 +1,202 @@
+.job-listing-page {
+    padding-top: var(--nav-height);
+}
+
+.hero {
+    position: relative;
+    padding: var(--space-32) 0 var(--space-24);
+    overflow: hidden;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    background: var(--color-primary);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--space-6);
+    backdrop-filter: blur(8px);
+}
+
+.hero__badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #0D9F6E;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.hero__title {
+    font-size: var(--text-6xl);
+    font-weight: 700;
+    color: white;
+    line-height: 1.05;
+    margin-bottom: var(--space-6);
+    letter-spacing: -0.03em;
+}
+
+.hero__title-accent {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero__subtitle {
+    font-size: var(--text-lg);
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* === Jobs Section === */
+.jobs-section {
+    padding: var(--space-12) 0 var(--space-24);
+    position: relative;
+}
+
+.jobs-section__search {
+    margin-top: calc(var(--space-12) * -1);
+    margin-bottom: var(--space-10);
+    position: relative;
+    z-index: 10;
+}
+
+.jobs-section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-8);
+}
+
+.jobs-section__count {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+}
+
+.jobs-section__count-number {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.jobs-section__count-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.jobs-section__clear-filters {
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.jobs-section__clear-filters:hover {
+    color: var(--color-accent-dark);
+}
+
+/* === Jobs Grid === */
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: var(--space-6);
+}
+
+/* === Empty State === */
+.jobs-empty {
+    text-align: center;
+    padding: var(--space-20) var(--space-8);
+}
+
+.jobs-empty__icon {
+    color: var(--color-border);
+    margin-bottom: var(--space-6);
+}
+
+.jobs-empty__title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-3);
+}
+
+.jobs-empty__text {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: var(--space-16) 0 var(--space-12);
+        min-height: auto;
+    }
+
+    .hero__title {
+        font-size: var(--text-4xl);
+    }
+
+    .hero__subtitle {
+        font-size: var(--text-base);
+    }
+
+    .jobs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jobs-section__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: var(--space-12) 0 var(--space-8);
+    }
+
+    .hero__title {
+        font-size: var(--text-3xl);
+    }
+
+    .hero__badge {
+        font-size: var(--text-xs);
+    }
+
+    .jobs-section {
+        padding: var(--space-8) 0 var(--space-16);
+    }
+}

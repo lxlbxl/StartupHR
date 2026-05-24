@@ -1,0 +1,176 @@
+{
+    "branding": {
+        "colorScheme": "light",
+        "fonts": [
+            {
+                "family": "Instrument Sans",
+                "role": "body"
+            },
+            {
+                "family": "Fraunces",
+                "role": "heading"
+            },
+            {
+                "family": "Nave Light Regular",
+                "role": "unknown"
+            },
+            {
+                "family": "Inter",
+                "role": "unknown"
+            }
+        ],
+        "colors": {
+            "primary": "#132E31",
+            "accent": "#F23205",
+            "background": "#FFFFFF",
+            "textPrimary": "#F23205",
+            "link": "#F23205"
+        },
+        "typography": {
+            "fontFamilies": {
+                "primary": "Instrument Sans",
+                "heading": "Fraunces"
+            },
+            "fontStacks": {
+                "heading": [
+                    "sans-serif"
+                ],
+                "body": [
+                    "sans-serif"
+                ],
+                "paragraph": [
+                    "Instrument Sans",
+                    "sans-serif"
+                ]
+            },
+            "fontSizes": {
+                "h1": "12px",
+                "h2": "64px",
+                "body": "14px"
+            }
+        },
+        "spacing": {
+            "baseUnit": 4,
+            "borderRadius": "0px"
+        },
+        "components": {
+            "buttonPrimary": {
+                "background": "#F23205",
+                "textColor": "#000000",
+                "borderRadius": "12px",
+                "borderRadiusCorners": {
+                    "topLeft": "12px",
+                    "topRight": "12px",
+                    "bottomRight": "12px",
+                    "bottomLeft": "12px"
+                },
+                "shadow": "none"
+            },
+            "buttonSecondary": {
+                "background": "#FFFFFF",
+                "textColor": "#0000EE",
+                "borderRadius": "12px",
+                "borderRadiusCorners": {
+                    "topLeft": "12px",
+                    "topRight": "12px",
+                    "bottomRight": "12px",
+                    "bottomLeft": "12px"
+                },
+                "shadow": "none"
+            }
+        },
+        "images": {
+            "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%20129%2031%22%3E%3Cpath%20d%3D%22M%20108.622%200%20L%20118.523%200%20C%20122.383%200%20125.78%202.087%20127.642%205.186%20C%20127.387%205.199%20127.125%205.217%20126.849%205.232%20C%20126.22%205.263%20125.653%205.473%20125.131%205.8%20C%20124.909%205.938%20124.379%206.386%20124.185%206.452%20L%20123.956%206.529%20L%20123.816%206.339%20C%20123.694%206.176%20123.6%205.79%20123.527%205.497%20L%20119.297%205.508%20L%20119.277%2025.009%20L%20123.751%2025.009%20C%20123.867%2021.264%20123.74%2016.678%20123.751%2012.932%20C%20123.755%2011.321%20124.475%2010.194%20126.127%209.793%20C%20127.159%209.542%20128.098%209.642%20129.107%209.659%20C%20129.135%209.978%20129.151%2010.301%20129.151%2010.627%20L%20129.151%2020.172%20C%20129.151%2026.018%20124.368%2030.8%20118.523%2030.8%20L%20108.622%2030.8%20C%20102.777%2030.8%2097.994%2026.017%2097.994%2020.172%20L%2097.994%2010.627%20C%2097.994%207.328%2099.517%204.368%20101.895%202.415%20L%20101.908%2025.011%20L%20106.357%2025.011%20C%20106.48%2021.082%20106.354%2018.826%20106.352%2014.896%20C%20106.351%209.469%20112.937%208.526%20113.051%2014.468%20L%20113.06%2025.012%20L%20117.537%2025.012%20L%20117.476%2011.475%20C%20117.341%205.771%20108.388%204.027%20106.352%209.11%20L%20106.288%200.262%20C%20107.04%200.092%20107.821%200.001%20108.621%200.001%20Z%22%20fill%3D%22rgb(242%2C50%2C5)%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%2073.299%2026.041%20L%2076.928%2026.034%20C%2076.929%2025.832%2076.924%2025.63%2076.923%2025.495%20C%2076.919%2025.035%2076.902%2024.573%2076.901%2024.114%20L%2076.877%207.161%20L%2072.639%207.237%20L%2072.639%2017.733%20C%2072.47%2023.537%2065.046%2023.519%2065.132%2019.899%20L%2065.081%207.147%20L%2061.149%207.156%20C%2061.147%207.248%2061.146%207.337%2061.144%207.415%20C%2061.129%208.02%2061.122%208.627%2061.118%209.232%20C%2061.105%2010.938%2061.111%2012.905%2061.121%2014.609%20C%2061.13%2016.304%2061.146%2015.737%2061.17%2017.43%20C%2061.182%2018.268%2061.16%2020.182%2061.228%2021.013%20C%2062.319%2028.349%2072.293%2026.976%2073.395%2023.539%20L%2073.301%2026.042%20Z%20M%2082.67%207.127%20L%2078.469%207.152%20L%2078.458%2031.477%20L%2082.323%2031.462%20L%2082.329%2023.973%20C%2085.321%2025.793%2087.811%2027.156%2091.328%2025.384%20C%2091.741%2025.099%2092.109%2024.786%2092.437%2024.448%20C%2094.028%2022.803%2094.656%2020.566%2094.688%2018.258%20C%2094.732%2015.202%2094.447%2011.205%2092.439%208.884%20C%2089.947%206.006%2085.932%206.797%2082.912%208.273%20Z%20M%2085.819%209.992%20C%2087.672%209.753%2088.982%2010.448%2089.89%2012.029%20C%2090.71%2013.458%2091.011%2015.953%2090.779%2018.036%20C%2089.941%2025.561%2082.36%2023.108%2082.341%2017.21%20L%2082.326%2012.357%20C%2082.322%2011.143%2084.8%2010.122%2085.819%209.991%20Z%20M%2060.313%2022.741%20C%2059.719%2022.897%2059.09%2023%2058.519%2022.88%20C%2057.988%2022.77%2057.505%2022.467%2057.145%2021.836%20C%2056.864%2021.344%2056.766%2020.878%2056.741%2020.39%20C%2056.638%2018.495%2056.746%2016.308%2056.735%2014.378%20L%2056.748%2010.164%20L%2060.174%2010.134%20L%2060.172%207.148%20L%2056.819%207.148%20L%2056.749%201.897%20L%2052.851%202.555%20C%2052.848%203.387%2052.84%204.196%2052.838%205.028%20C%2052.831%207.028%2052.833%209.03%2052.835%2011.031%20C%2052.838%2013.973%2052.855%2015.614%2052.855%2018.555%20C%2052.855%2019.922%2052.789%2021.327%2053.051%2022.676%20C%2053.496%2024.967%2054.863%2026.039%2057.157%2026.22%20C%2058.258%2026.307%2059.28%2026.24%2060.313%2025.937%20L%2060.313%2022.74%20Z%20M%2045.648%2025.835%20L%2045.648%2014.863%20C%2045.648%2011.771%2048.179%2010.788%2051.112%2011.004%20C%2051.205%2011.011%2051.311%2011.024%2051.418%2011.037%20C%2051.428%209.656%2051.527%208.237%2051.495%206.86%20C%2049.658%206.673%2046.87%207.042%2045.883%208.789%20L%2045.654%207.224%20L%2041.673%207.261%20L%2041.667%2025.846%20L%2045.647%2025.836%20Z%20M%2023.918%2022.771%20C%2022.773%2023.072%2021.497%2023.175%2020.749%2021.866%20C%2020.459%2021.358%2020.371%2020.882%2020.355%2020.381%20C%2020.292%2018.442%2020.36%2016.371%2020.34%2014.41%20L%2020.353%2010.197%20L%2023.894%2010.165%20L%2023.892%207.179%20L%2020.424%207.179%20L%2020.354%201.899%20L%2016.438%202.557%20C%2016.435%203.389%2016.446%204.227%2016.443%205.06%20C%2016.436%207.061%2016.438%209.062%2016.44%2011.063%20C%2016.443%2014.004%2016.46%2015.645%2016.46%2018.586%20C%2016.46%2019.953%2016.395%2021.358%2016.656%2022.708%20C%2017.102%2025%2018.469%2026.071%2020.763%2026.252%20C%2021.863%2026.339%2022.885%2026.273%2023.919%2025.97%20L%2023.919%2022.773%20Z%20M%200.068%2022.855%20C%202.256%2026.226%206.607%2026.847%2010.292%2025.905%20C%2012.026%2025.461%2013.629%2024.451%2014.499%2022.849%20C%2015.384%2021.217%2015.302%2018.753%2014.218%2017.239%20C%2012.848%2015.325%2010.566%2014.794%208.411%2014.281%20C%20-0.247%2012.215%205.336%205.691%2010.841%209.317%20L%2013.538%207.255%20C%2010.147%203.922%202.857%203.989%200.572%208.611%20C%20-0.151%2010.071%20-0.24%2012.231%200.61%2013.655%20C%201.607%2015.322%203.148%2016.129%204.939%2016.704%20C%206.464%2017.193%208.541%2017.538%209.85%2018.428%20C%2013.515%2020.921%208.138%2026.258%203.007%2021.09%20L%200.067%2022.856%20Z%20M%2036.59%2025.847%20L%2040.838%2025.841%20C%2040.291%2023.995%2039.971%2022.106%2039.964%2020.197%20C%2039.959%2018.783%2039.982%2018.671%2039.982%2017.258%20C%2039.982%2015.615%2040.101%2013.758%2039.859%2012.141%20C%2039.644%2010.704%2039.123%209.627%2038.086%208.587%20C%2035.505%205.996%2029.144%206.347%2026.699%209.05%20C%2025.962%209.865%2025.506%2010.647%2025.318%2011.731%20L%2029.193%2011.709%20C%2030.016%208.292%2036.757%208.092%2036.08%2014.711%20C%2032.465%2015.041%2027.063%2014.011%2025.237%2017.997%20C%2024.74%2019.085%2024.579%2020.546%2024.766%2021.728%20C%2025.094%2023.814%2026.597%2025.379%2028.58%2026.008%20C%2031.568%2026.958%2033.944%2025.605%2036.19%2023.974%20C%2036.352%2024.817%2036.377%2025.014%2036.589%2025.847%20Z%20M%2035.838%2017.498%20L%2035.823%2019.747%20C%2035.772%2023.086%2027.917%2024.619%2028.633%2019.884%20C%2029.232%2015.922%2032.857%2017.569%2035.838%2017.497%20Z%22%20fill%3D%22rgb(255%2C%20255%2C%20255)%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E",
+            "favicon": "https://framerusercontent.com/images/6CpWA82dFVgOP1tQ7Sp8gVO0674.png",
+            "ogImage": "https://framerusercontent.com/images/CZNBXy9EHELjhNozbXPdTsQzSSQ.png",
+            "logoHref": "./#hero"
+        },
+        "__llm_logo_reasoning": {
+            "selectedIndex": 1,
+            "reasoning": "Selected #1 because it is a medium-sized, visible logo in the header area, matching the brand 'StartupHR Africa'.",
+            "confidence": 0.9,
+            "source": "llm"
+        },
+        "__llm_button_reasoning": {
+            "primary": {
+                "index": 1,
+                "text": "Book a service",
+                "reasoning": "Button #1 ('Book a service') is the primary CTA because it uses the vibrant brand color #F23205 and has action-oriented text, making it the most prominent call-to-action."
+            },
+            "secondary": {
+                "index": 2,
+                "text": "Learn more",
+                "reasoning": "Button #2 ('Learn more') is the secondary CTA as it has a different background color (#FFFFFF) and serves as a less prominent action compared to the primary button."
+            },
+            "confidence": 0.95
+        },
+        "personality": {
+            "tone": "professional",
+            "energy": "medium",
+            "targetAudience": "Startups and HR professionals in Africa"
+        },
+        "designSystem": {
+            "framework": "custom",
+            "componentLibrary": ""
+        },
+        "confidence": {
+            "buttons": 0.95,
+            "colors": 0.9,
+            "overall": 0.925
+        },
+        "__llm_metadata": {
+            "logoSelection": {
+                "llmCalled": true,
+                "llmSucceeded": true,
+                "finalSource": "llm",
+                "rawLogoSelection": {
+                    "selectedLogoIndex": 1,
+                    "selectedLogoReasoning": "Selected #1 because it is a medium-sized, visible logo in the header area, matching the brand 'StartupHR Africa'.",
+                    "confidence": 0.9
+                }
+            },
+            "buttonClassification": {
+                "llmCalled": true,
+                "llmSucceeded": true
+            }
+        }
+    },
+    "metadata": {
+        "twitter:title": "StartupHR Africa",
+        "twitter:image": "https://framerusercontent.com/images/CZNBXy9EHELjhNozbXPdTsQzSSQ.png",
+        "color-scheme": "light dark",
+        "twitter:description": "Startuphr helps founders and businesses in Africa hire top talent, build HR structures and onboard employees.",
+        "og:url": "https://startuphr.africa/",
+        "description": "Startuphr helps founders and businesses in Africa hire top talent, build HR structures and onboard employees.",
+        "viewport": [
+            "width=device-width",
+            "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        ],
+        "og:description": "Startuphr helps founders and businesses in Africa hire top talent, build HR structures and onboard employees.",
+        "framer-search-index": "https://framerusercontent.com/sites/HVoKYzPwiejSzXIwl0ITz/searchIndex-5IjNsBV697CT.json",
+        "og:image": "https://framerusercontent.com/images/CZNBXy9EHELjhNozbXPdTsQzSSQ.png",
+        "language": "en",
+        "title": "StartupHR Africa",
+        "framer-search-index-fallback": "https://framerusercontent.com/sites/HVoKYzPwiejSzXIwl0ITz/searchIndex-JaV1ieDEToBH.json",
+        "twitter:card": "summary_large_image",
+        "generator": "Framer f21d278",
+        "ogDescription": "Startuphr helps founders and businesses in Africa hire top talent, build HR structures and onboard employees.",
+        "og:type": "website",
+        "robots": "max-image-preview:large",
+        "ogUrl": "https://startuphr.africa/",
+        "ogTitle": "StartupHR Africa",
+        "og:title": "StartupHR Africa",
+        "ogImage": "https://framerusercontent.com/images/CZNBXy9EHELjhNozbXPdTsQzSSQ.png",
+        "favicon": "https://framerusercontent.com/images/6CpWA82dFVgOP1tQ7Sp8gVO0674.png",
+        "scrapeId": "019cc051-33bc-747d-ac93-581703ee16e4",
+        "sourceURL": "https://startuphr.africa/",
+        "url": "https://startuphr.africa/",
+        "statusCode": 200,
+        "contentType": "text/html",
+        "timezone": "America/New_York",
+        "proxyUsed": "basic",
+        "indexId": "8cdeab70-a264-4d8e-b75d-a04ede25cc4c",
+        "creditsUsed": 1,
+        "concurrencyLimited": false
+    }
+}
