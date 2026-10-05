@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+
+/* Pipeline brand: mint #2DEBBE on dark teal #06303A */
+@theme {
+  --color-teal-950: #04232a;
+  --color-teal-900: #06303a;
+  --color-teal-800: #0b3f4b;
+  --color-teal-700: #12505e;
+  --color-teal-600: #1d6676;
+  --color-mint-300: #8ff5dc;
+  --color-mint-400: #2debbe;
+  --color-mint-500: #1fcfa6;
+  --color-mint-600: #16a886;
+  --color-paper: #f3fbf9;
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-teal-900);
+  color: #fff;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-mint-400);
+  color: var(--color-teal-900);
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-mint-400 px-5 py-3 font-semibold text-teal-900 transition hover:bg-mint-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mint-400 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-5 py-3 font-semibold text-white transition hover:border-mint-400 hover:text-mint-400;
+  }
+  .eyebrow {
+    @apply font-mono text-xs font-semibold tracking-[0.2em] text-mint-400 uppercase;
+  }
+
+  /* Form controls (light surface) */
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-teal-900;
+  }
+  .field-input {
+    @apply block w-full rounded-lg border border-teal-900/15 bg-white px-3.5 py-2.5 text-[15px] text-teal-950 shadow-xs transition outline-none placeholder:text-teal-900/40 focus:border-mint-600 focus:ring-4 focus:ring-mint-400/25 aria-invalid:border-red-500 aria-invalid:ring-red-500/15;
+  }
+  .field-error {
+    @apply mt-1.5 text-sm text-red-600;
+  }
+  .field-hint {
+    @apply mt-1.5 text-xs text-teal-900/55;
+  }
+}
+
+.field-select {
+  appearance: none;
+  padding-right: 2.25rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 7.5l4.5 4.5 4.5-4.5' stroke='%2306303A' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.1rem;
+}
