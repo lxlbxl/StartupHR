@@ -2,6 +2,10 @@
 
 A modern job listing and talent acquisition platform built by **Digital20 Team**. Currently hosted on the [Demo Server](https://demo.d20.com.ng/).
 
+## Pipeline (new)
+
+The `pipeline/` folder holds **Pipeline by StartupHR**: a Next.js + SQLite landing page with a talent-request form and an admin view of submissions. See [`pipeline/README.md`](pipeline/README.md).
+
 ## Tech Stack
 
 - **Frontend:** React SPA with Vite + Vanilla CSS (glassmorphism design)
