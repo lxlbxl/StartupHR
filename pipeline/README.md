@@ -20,7 +20,7 @@ npm run dev                  # http://localhost:3000
 ```
 
 The database is created at `./data/pipeline.db` on first request (override with `DATABASE_PATH`).
-The first admin is created from `ADMIN_EMAIL` / `ADMIN_PASSWORD` the first time someone opens the login page and the `users` table is empty. Add or reset logins later with:
+The first admin is created from `ADMIN_EMAIL` / `ADMIN_PASSWORD` on the first sign-in attempt while the `users` table is empty. Add or reset logins later with:
 
 ```bash
 npm run create-admin -- someone@startuphr.africa 'a-long-password' "Their Name" recruiter
